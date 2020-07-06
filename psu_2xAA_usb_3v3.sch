@@ -1,0 +1,259 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title "Badge 3.3v power supply with 2x AA and USB, auto switch"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L device:Q_NMOS_GSD Q1
+U 1 1 5EDE2043
+P 5500 2350
+F 0 "Q1" H 5705 2304 50  0000 L CNN
+F 1 "CJ2302" H 5705 2395 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5700 2450 50  0001 C CNN
+F 3 "~" H 5500 2350 50  0001 C CNN
+	1    5500 2350
+	1    0    0    1   
+$EndComp
+$Comp
+L device:Q_PMOS_GSD Q2
+U 1 1 5EDE3340
+P 5500 3050
+F 0 "Q2" H 5705 3004 50  0000 L CNN
+F 1 "CJ2305" H 5705 3095 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5700 3150 50  0001 C CNN
+F 3 "~" H 5500 3050 50  0001 C CNN
+	1    5500 3050
+	1    0    0    1   
+$EndComp
+$Comp
+L device:R R3
+U 1 1 5EDE5678
+P 5150 2700
+F 0 "R3" H 5220 2746 50  0000 L CNN
+F 1 "4.7k" H 5220 2655 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 5080 2700 50  0001 C CNN
+F 3 "~" H 5150 2700 50  0001 C CNN
+	1    5150 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R4
+U 1 1 5EDE5C77
+P 5150 3350
+F 0 "R4" H 5220 3396 50  0000 L CNN
+F 1 "6.8k" H 5220 3305 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 5080 3350 50  0001 C CNN
+F 3 "~" H 5150 3350 50  0001 C CNN
+	1    5150 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2550 5600 2700
+Wire Wire Line
+	5600 2700 6050 2700
+Connection ~ 5600 2700
+Wire Wire Line
+	5600 2700 5600 2850
+Wire Wire Line
+	5150 2850 5150 3050
+Wire Wire Line
+	5300 3050 5150 3050
+Connection ~ 5150 3050
+Wire Wire Line
+	5150 3050 5150 3200
+Wire Wire Line
+	5300 2350 5150 2350
+Wire Wire Line
+	5150 2550 5150 2350
+Connection ~ 5150 2350
+Wire Wire Line
+	5150 2350 4850 2350
+Wire Wire Line
+	5600 2150 5600 2050
+Wire Wire Line
+	5600 2050 4850 2050
+$Comp
+L power:GND #PWR023
+U 1 1 5EDE68C1
+P 5150 3600
+F 0 "#PWR023" H 5150 3350 50  0001 C CNN
+F 1 "GND" H 5155 3427 50  0000 C CNN
+F 2 "" H 5150 3600 50  0001 C CNN
+F 3 "" H 5150 3600 50  0001 C CNN
+	1    5150 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3500 5150 3600
+Wire Wire Line
+	5600 3250 5600 3900
+Wire Wire Line
+	5600 3900 4850 3900
+Text Label 4850 3900 0    50   ~ 0
+BAT+
+Text Label 4850 2050 0    50   ~ 0
+VREG_OUT
+$Comp
+L power:VCC #PWR024
+U 1 1 5EDE8A64
+P 6050 2700
+F 0 "#PWR024" H 6050 2550 50  0001 C CNN
+F 1 "VCC" V 6067 2828 50  0000 L CNN
+F 2 "" H 6050 2700 50  0001 C CNN
+F 3 "" H 6050 2700 50  0001 C CNN
+	1    6050 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L device:Battery_Cell BT1
+U 1 1 5EDE96C5
+P 3600 4350
+F 0 "BT1" H 3718 4446 50  0000 L CNN
+F 1 "AA" H 3718 4355 50  0000 L CNN
+F 2 "Power:Single_AA" V 3600 4410 50  0001 C CNN
+F 3 "~" V 3600 4410 50  0001 C CNN
+	1    3600 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Battery_Cell BT2
+U 1 1 5EDEAD81
+P 3600 4900
+F 0 "BT2" H 3718 4996 50  0000 L CNN
+F 1 "AA" H 3718 4905 50  0000 L CNN
+F 2 "Power:Single_AA" V 3600 4960 50  0001 C CNN
+F 3 "~" V 3600 4960 50  0001 C CNN
+	1    3600 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5EDEBA00
+P 3600 5250
+F 0 "#PWR021" H 3600 5000 50  0001 C CNN
+F 1 "GND" H 3605 5077 50  0000 C CNN
+F 2 "" H 3600 5250 50  0001 C CNN
+F 3 "" H 3600 5250 50  0001 C CNN
+	1    3600 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 5250 3600 5000
+Wire Wire Line
+	3600 4700 3600 4450
+Wire Wire Line
+	3600 4150 3600 3900
+Wire Wire Line
+	3600 3900 3850 3900
+Text Label 3850 3900 0    50   ~ 0
+BAT+
+$Comp
+L Regulator_Linear:AP2204K-3.3 U3
+U 1 1 5EDF3EEB
+P 3200 2150
+F 0 "U3" H 3200 2492 50  0000 C CNN
+F 1 "HX9193-33GB" H 3200 2401 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 3200 2475 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1811131153_HX-hengjiaxing-HX9193-33GB_C296123.pdf" H 3200 2250 50  0001 C CNN
+	1    3200 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C7
+U 1 1 5EDF540B
+P 2500 2300
+F 0 "C7" H 2615 2346 50  0000 L CNN
+F 1 "1uF" H 2615 2255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2538 2150 50  0001 C CNN
+F 3 "~" H 2500 2300 50  0001 C CNN
+	1    2500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C8
+U 1 1 5EDF6608
+P 3650 2300
+F 0 "C8" H 3765 2346 50  0000 L CNN
+F 1 "1uF" H 3765 2255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3688 2150 50  0001 C CNN
+F 3 "~" H 3650 2300 50  0001 C CNN
+	1    3650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5EDF74B8
+P 2500 2550
+F 0 "#PWR019" H 2500 2300 50  0001 C CNN
+F 1 "GND" H 2505 2377 50  0000 C CNN
+F 2 "" H 2500 2550 50  0001 C CNN
+F 3 "" H 2500 2550 50  0001 C CNN
+	1    2500 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5EDF7875
+P 3200 2550
+F 0 "#PWR020" H 3200 2300 50  0001 C CNN
+F 1 "GND" H 3205 2377 50  0000 C CNN
+F 2 "" H 3200 2550 50  0001 C CNN
+F 3 "" H 3200 2550 50  0001 C CNN
+	1    3200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5EDF7B9A
+P 3650 2550
+F 0 "#PWR022" H 3650 2300 50  0001 C CNN
+F 1 "GND" H 3655 2377 50  0000 C CNN
+F 2 "" H 3650 2550 50  0001 C CNN
+F 3 "" H 3650 2550 50  0001 C CNN
+	1    3650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2050 2800 2050
+Wire Wire Line
+	2500 2150 2500 2050
+Connection ~ 2500 2050
+Wire Wire Line
+	2500 2050 2150 2050
+Wire Wire Line
+	2900 2150 2800 2150
+Wire Wire Line
+	2800 2150 2800 2050
+Connection ~ 2800 2050
+Wire Wire Line
+	2800 2050 2500 2050
+Wire Wire Line
+	3200 2450 3200 2550
+Wire Wire Line
+	2500 2450 2500 2550
+Wire Wire Line
+	3650 2450 3650 2550
+Wire Wire Line
+	3500 2050 3650 2050
+Wire Wire Line
+	3650 2150 3650 2050
+Connection ~ 3650 2050
+Wire Wire Line
+	3650 2050 3850 2050
+Text HLabel 2150 2050 0    50   Input ~ 0
+USB_BUS_POWER
+Text HLabel 4850 2350 0    50   Input ~ 0
+USB_BUS_POWER
+Text Label 3850 2050 0    50   ~ 0
+VREG_OUT
+$EndSCHEMATC

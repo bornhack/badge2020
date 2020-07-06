@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name Power)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Power.pretty)(options "")(descr ""))
+  (lib (name Connectors)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Connectors.pretty)(options "")(descr ""))
+  (lib (name Buttons)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Buttons.pretty)(options "")(descr ""))
+  (lib (name badgelife_sao_v169bis)(type KiCad)(uri /Users/tf/Documents/Libraries/Badgelife_SAO_v169bis_20190321-0053/badgelife_sao_v169bis.pretty)(options "")(descr ""))
+  (lib (name Opto)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Opto.pretty)(options "")(descr ""))
+)

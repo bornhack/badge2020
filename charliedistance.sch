@@ -1,0 +1,237 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title "Charlie Distance Badge"
+Date ""
+Rev ""
+Comp "BornHack"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 8550 1350 1700 650 
+U 5EC90811
+F0 "issi_charlie_9x16_a" 50
+F1 "issi_charlie_9x16.sch" 50
+F2 "SDA" B L 8550 1450 50 
+F3 "SCL" B L 8550 1550 50 
+F4 "ADDRESS" I L 8550 1650 50 
+F5 "~SDB" I L 8550 1800 50 
+F6 "~INTB" O L 8550 1900 50 
+$EndSheet
+$Sheet
+S 8550 2600 1700 650 
+U 5F64D6C7
+F0 "issi_charlie_9x16_b" 50
+F1 "issi_charlie_9x16.sch" 50
+F2 "SDA" B L 8550 2700 50 
+F3 "SCL" B L 8550 2800 50 
+F4 "ADDRESS" I L 8550 2900 50 
+F5 "~SDB" I L 8550 3050 50 
+F6 "~INTB" O L 8550 3150 50 
+$EndSheet
+Text GLabel 8550 1450 0    50   BiDi ~ 0
+SDA
+Text GLabel 8550 1550 0    50   BiDi ~ 0
+SCL
+Text GLabel 8550 2700 0    50   BiDi ~ 0
+SDA
+Text GLabel 8550 2800 0    50   BiDi ~ 0
+SCL
+$Comp
+L power:GND #PWR01
+U 1 1 5F6546B4
+P 8150 1750
+F 0 "#PWR01" H 8150 1500 50  0001 C CNN
+F 1 "GND" H 8155 1577 50  0000 C CNN
+F 2 "" H 8150 1750 50  0001 C CNN
+F 3 "" H 8150 1750 50  0001 C CNN
+	1    8150 1750
+	1    0    0    -1  
+$EndComp
+Text GLabel 8550 1800 0    50   Input ~ 0
+IS_SDB
+Text GLabel 8550 3050 0    50   Input ~ 0
+IS_SDB
+Wire Wire Line
+	8150 1650 8150 1750
+Wire Wire Line
+	8150 1650 8550 1650
+$Sheet
+S 1100 1150 2000 850 
+U 5ECCD596
+F0 "psu" 50
+F1 "psu_2xAA_usb_3v3.sch" 50
+F2 "USB_BUS_POWER" I L 1100 1350 50 
+$EndSheet
+Text GLabel 3100 2750 2    50   BiDi ~ 0
+SDA
+Text GLabel 3100 2850 2    50   BiDi ~ 0
+SCL
+Wire Wire Line
+	1100 1350 950  1350
+Wire Wire Line
+	950  1350 950  2800
+Wire Wire Line
+	950  2800 1100 2800
+$Comp
+L power:VCC #PWR02
+U 1 1 5EE1B586
+P 8150 2800
+F 0 "#PWR02" H 8150 2650 50  0001 C CNN
+F 1 "VCC" H 8167 2973 50  0000 C CNN
+F 2 "" H 8150 2800 50  0001 C CNN
+F 3 "" H 8150 2800 50  0001 C CNN
+	1    8150 2800
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1100 2600 2000 1700
+U 5ED0DA4B
+F0 "samd21" 50
+F1 "samd21.sch" 50
+F2 "USB_BUS_POWER" O L 1100 2800 50 
+F3 "SDA" B R 3100 2750 50 
+F4 "SCL" B R 3100 2850 50 
+F5 "SAO_GPIO1" B R 3100 4000 50 
+F6 "SAO_GPIO2" B R 3100 4100 50 
+F7 "IR_TX" O R 3100 3200 50 
+F8 "IR_RX" I R 3100 3300 50 
+F9 "BTN_A" I R 3100 3500 50 
+F10 "BTN_B" I R 3100 3600 50 
+F11 "BTN_X" I R 3100 3700 50 
+F12 "BTN_Y" I R 3100 3800 50 
+F13 "INTB" I R 3100 2950 50 
+F14 "SDB" O R 3100 3050 50 
+$EndSheet
+Wire Wire Line
+	8150 2800 8150 2900
+Wire Wire Line
+	8150 2900 8550 2900
+$Sheet
+S 8550 4250 1700 600 
+U 5EE5A538
+F0 "ir" 50
+F1 "ir.sch" 50
+F2 "TX" I L 8550 4400 50 
+F3 "RX" O L 8550 4500 50 
+$EndSheet
+$Sheet
+S 8550 5200 1700 950 
+U 5EE5ADBC
+F0 "buttons" 50
+F1 "buttons.sch" 50
+F2 "A" O L 8550 5350 50 
+F3 "B" O L 8550 5450 50 
+F4 "X" O L 8550 5550 50 
+F5 "Y" O L 8550 5650 50 
+$EndSheet
+$Comp
+L badgelife_shitty_addon_v169bis:Badgelife_sao_connector_v169bis X1
+U 1 1 5EE11D88
+P 2900 6300
+F 0 "X1" V 2435 6300 50  0000 C CNN
+F 1 "Badgelife_sao_connector_v169bis" V 2526 6300 50  0000 C CNN
+F 2 "badgelife_sao_v169bis:Badgelife-SAOv169-BADGE-2x3" H 2900 6500 50  0001 C CNN
+F 3 "" H 2900 6500 50  0001 C CNN
+	1    2900 6300
+	0    1    1    0   
+$EndComp
+Text GLabel 3450 6300 2    50   BiDi ~ 0
+SDA
+Text GLabel 2350 6300 0    50   BiDi ~ 0
+SCL
+$Comp
+L power:GND #PWR03
+U 1 1 5EE132B0
+P 1950 6200
+F 0 "#PWR03" H 1950 5950 50  0001 C CNN
+F 1 "GND" H 1955 6027 50  0000 C CNN
+F 2 "" H 1950 6200 50  0001 C CNN
+F 3 "" H 1950 6200 50  0001 C CNN
+	1    1950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR04
+U 1 1 5EE13A48
+P 3850 6000
+F 0 "#PWR04" H 3850 5850 50  0001 C CNN
+F 1 "VCC" H 3867 6173 50  0000 C CNN
+F 2 "" H 3850 6000 50  0001 C CNN
+F 3 "" H 3850 6000 50  0001 C CNN
+	1    3850 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 6100 3850 6100
+Wire Wire Line
+	3850 6100 3850 6000
+Wire Wire Line
+	2350 6100 1950 6100
+Wire Wire Line
+	1950 6100 1950 6200
+Wire Wire Line
+	3100 3200 6950 3200
+Wire Wire Line
+	6950 3200 6950 4400
+Wire Wire Line
+	6950 4400 8550 4400
+Wire Wire Line
+	3100 3300 6850 3300
+Wire Wire Line
+	6850 3300 6850 4500
+Wire Wire Line
+	6850 4500 8550 4500
+Wire Wire Line
+	3100 4000 4300 4000
+Wire Wire Line
+	4300 4000 4300 6500
+Wire Wire Line
+	4300 6500 3450 6500
+Wire Wire Line
+	3100 4100 3350 4100
+Wire Wire Line
+	3350 4100 3350 5500
+Wire Wire Line
+	3350 5500 1600 5500
+Wire Wire Line
+	1600 5500 1600 6500
+Wire Wire Line
+	1600 6500 2350 6500
+Wire Wire Line
+	3100 3500 6500 3500
+Wire Wire Line
+	6500 3500 6500 5350
+Wire Wire Line
+	6500 5350 8550 5350
+Wire Wire Line
+	3100 3600 6400 3600
+Wire Wire Line
+	6400 3600 6400 5450
+Wire Wire Line
+	6400 5450 8550 5450
+Wire Wire Line
+	3100 3700 6300 3700
+Wire Wire Line
+	6300 3700 6300 5550
+Wire Wire Line
+	6300 5550 8550 5550
+Wire Wire Line
+	3100 3800 6200 3800
+Wire Wire Line
+	6200 3800 6200 5650
+Wire Wire Line
+	6200 5650 8550 5650
+Text GLabel 3100 3050 2    50   Output ~ 0
+IS_SDB
+Text GLabel 8550 1900 0    50   Output ~ 0
+IS_INTB
+Text GLabel 3100 2950 2    50   Input ~ 0
+IS_INTB
+$EndSCHEMATC
