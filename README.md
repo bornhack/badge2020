@@ -29,7 +29,7 @@ is pull out to small SMD pads for optional soldering on add-ons or similar.
 
 ## Getting started
 
-To start making your badge your own, you can connect it via USB and a mass storrage
+To start making your badge your own, you can connect it via USB and a mass storage
 device should show up with a `code.py` file in the root directory.
 
 If you open that file in your favorite text editor you will find a few lines first
