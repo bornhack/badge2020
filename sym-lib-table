@@ -4,4 +4,7 @@
   (lib (name badgelife_shitty_addon_v169bis)(type Legacy)(uri /Users/tf/Documents/Libraries/Badgelife_SAO_v169bis_20190321-0053/badgelife_shitty_addon_v169bis.lib)(options "")(descr ""))
   (lib (name gd25q32c)(type Legacy)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/gd25q32c.lib)(options "")(descr ""))
   (lib (name Regulator_Linear)(type Legacy)(uri /Users/tf/Documents/Libraries/kicad-symbol/Regulator_Linear.lib)(options "")(descr ""))
+  (lib (name Transistor_BJT)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Transistor_BJT.lib)(options "")(descr ""))
+  (lib (name Opto)(type Legacy)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Opto.lib)(options "")(descr ""))
+  (lib (name Semiconductors)(type Legacy)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Semiconductors.lib)(options "")(descr ""))
 )

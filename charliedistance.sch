@@ -69,9 +69,9 @@ F0 "psu" 50
 F1 "psu_2xAA_usb_3v3.sch" 50
 F2 "USB_BUS_POWER" I L 1100 1350 50 
 $EndSheet
-Text GLabel 3100 2750 2    50   BiDi ~ 0
+Text GLabel 3100 2700 2    50   BiDi ~ 0
 SDA
-Text GLabel 3100 2850 2    50   BiDi ~ 0
+Text GLabel 3100 2800 2    50   BiDi ~ 0
 SCL
 Wire Wire Line
 	1100 1350 950  1350
@@ -96,8 +96,8 @@ U 5ED0DA4B
 F0 "samd21" 50
 F1 "samd21.sch" 50
 F2 "USB_BUS_POWER" O L 1100 2800 50 
-F3 "SDA" B R 3100 2750 50 
-F4 "SCL" B R 3100 2850 50 
+F3 "SDA" B R 3100 2700 50 
+F4 "SCL" B R 3100 2800 50 
 F5 "SAO_GPIO1" B R 3100 4000 50 
 F6 "SAO_GPIO2" B R 3100 4100 50 
 F7 "IR_TX" O R 3100 3200 50 
@@ -106,8 +106,9 @@ F9 "BTN_A" I R 3100 3500 50
 F10 "BTN_B" I R 3100 3600 50 
 F11 "BTN_X" I R 3100 3700 50 
 F12 "BTN_Y" I R 3100 3800 50 
-F13 "INTB" I R 3100 2950 50 
-F14 "SDB" O R 3100 3050 50 
+F13 "SDB" O R 3100 3100 50 
+F14 "INTB_1" I R 3100 2900 50 
+F15 "INTB_2" I R 3100 3000 50 
 $EndSheet
 Wire Wire Line
 	8150 2800 8150 2900
@@ -228,10 +229,14 @@ Wire Wire Line
 	6200 3800 6200 5650
 Wire Wire Line
 	6200 5650 8550 5650
-Text GLabel 3100 3050 2    50   Output ~ 0
+Text GLabel 3100 3100 2    50   Output ~ 0
 IS_SDB
-Text GLabel 8550 1900 0    50   Output ~ 0
-IS_INTB
-Text GLabel 3100 2950 2    50   Input ~ 0
-IS_INTB
+Text GLabel 3100 2900 2    50   Input ~ 0
+INTB_1
+Text GLabel 3100 3000 2    50   Input ~ 0
+INTB_2
+Text GLabel 8550 1900 0    50   Input ~ 0
+INTB_1
+Text GLabel 8550 3150 0    50   Input ~ 0
+INTB_2
 $EndSCHEMATC
