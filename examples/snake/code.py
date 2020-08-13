@@ -6,7 +6,6 @@ import busio
 import adafruit_framebuf
 import adafruit_is31fl3731
 from random import randint
-from number import numbers
 
 numbers = [
     [0b0000, 0b0110, 0b1001, 0b1001, 0b1001, 0b1001, 0b1001, 0b0110, 0b0000,],
