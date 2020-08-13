@@ -22,35 +22,35 @@ oldX = True
 oldY = True
 
 while True:
-	newA = btnA.value
-	newB = btnB.value
-	newX = btnX.value
-	newY = btnY.value
-	
-	if newA != oldA:
-		oldA = newA
-		if not newA:
-			print("Button A pressed!")
-		else:
-			print("Button A released!")
-	
-	if newB != oldB:
-		oldB = newB
-		if not newB:
-			print("Button B pressed!")
-		else:
-			print("Button B released!")
-	
-	if newX != oldX:
-		oldX = newX
-		if not newX:
-			print("Button X pressed!")
-		else:
-			print("Button X released!")
-	
-	if newY != oldY:
-		oldY = newY
-		if not newY:
-			print("Button Y pressed!")
-		else:
-			print("Button Y released!")
+    newA = btnA.value
+    newB = btnB.value
+    newX = btnX.value
+    newY = btnY.value
+
+    if newA != oldA:
+        oldA = newA
+        if not newA:
+            print("Button A pressed!")
+        else:
+            print("Button A released!")
+
+    if newB != oldB:
+        oldB = newB
+        if not newB:
+            print("Button B pressed!")
+        else:
+            print("Button B released!")
+
+    if newX != oldX:
+        oldX = newX
+        if not newX:
+            print("Button X pressed!")
+        else:
+            print("Button X released!")
+
+    if newY != oldY:
+        oldY = newY
+        if not newY:
+            print("Button Y pressed!")
+        else:
+            print("Button Y released!")
