@@ -45,5 +45,6 @@ If you have gotten this far you are up and running with your first "hack" of the
 ## Projects using the badge
 
 - [Generative animations in OCaml](https://github.com/rand00/bornhack2020-badge_generative-animations)
+  - Animations are pregenerated in OCaml and played back on the badge using python
 
 
